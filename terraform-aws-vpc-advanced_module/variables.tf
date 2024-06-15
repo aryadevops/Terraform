@@ -84,17 +84,15 @@ variable "default_route_table_id" {
   
 }
 
-variable "public_route_table_id" {
+variable "requestor_vpc_id" {
+  
+}
+variable "is_peering_required" {
+  default = true
   
 }
 
-variable "private_route_table_id" {
-  
-}
-variable "database_route_table_id" {
-  
-}
-variable "requestor_vpc_id" {
+variable "default_vpc_cidr" {
   
 }
 
