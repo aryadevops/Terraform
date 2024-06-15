@@ -80,4 +80,21 @@ variable "subnet_db_group_tags" {
   default = {}
   
 }
+variable "default_route_table_id" {
+  
+}
+
+variable "public_route_table_id" {
+  
+}
+
+variable "private_route_table_id" {
+  
+}
+variable "database_route_table_id" {
+  
+}
+variable "requestor_vpc_id" {
+  
+}
 
