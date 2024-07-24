@@ -8,7 +8,7 @@ terraform {
 
     backend "s3" {
     bucket   = "roboshop-infra-buck"
-    key = "terraform-aws-vpc-advanced"
+    key = "terraform-role"
     region = "us-east-1"
     dynamodb_table = "roboshop-infra-locking"
   }

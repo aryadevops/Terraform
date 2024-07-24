@@ -15,3 +15,21 @@ module "ec2_instances" {
     )
   
 }
+
+module "ec2_ansible" {
+
+    source = "terraform-aws-modules/ec2-instance/aws"
+    ami = data.aws_ami.devops_ami.id
+    instance_type = "t2.micro"
+    vpc_security_group_ids = [local.allow_all_sg_ids]
+    subnet_id = local.public_subnet_ids[0]
+    user_data = file("roboshop-ansible.sh")
+
+    tags = merge(
+        {
+            Name = "Ansible"
+        },
+        var.common_tags
+    )
+  
+}

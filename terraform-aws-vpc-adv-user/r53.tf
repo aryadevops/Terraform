@@ -2,7 +2,7 @@ module "records" {
     source = "terraform-aws-modules/route53/aws//modules/records"
     for_each = local.ips
     zone_name = var.zone_name
-    records =[
+    records = [
         {
             name = "${each.key}"
             type = "A"
