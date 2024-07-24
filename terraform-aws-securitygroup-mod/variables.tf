@@ -2,10 +2,6 @@ variable "project_name" {
   
 }
 
-variable "env" {
-  default = ""
-}
-
 variable "sg_name" {
   
 }
